@@ -1,6 +1,3 @@
-// 🎵 Simple Music Player (Rectangles Only)
-// Beginner-friendly version
-
 PFont titleFont, textFont;
 
 void setup() {
