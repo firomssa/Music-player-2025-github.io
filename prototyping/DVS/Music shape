@@ -1,0 +1,14 @@
+int s = 10;   // size of the square
+
+void setup() {
+  size(400, 400);
+  rectMode(CENTER);   // draw from the center
+}
+
+void draw() {
+  background(255);
+
+  rect(width/2, height/2, s, s);  // centered
+
+  s = s + 1;  // grow
+}
