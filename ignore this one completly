@@ -1,5 +1,3 @@
-// 🎶 Creative Music Player UI
-// Designed by you + upgraded by ChatGPT 😎
 
 PFont titleFont, textFont;  // renamed to avoid any possible conflicts
 float[] bars = new float[20];  // for animated equalizer bars
