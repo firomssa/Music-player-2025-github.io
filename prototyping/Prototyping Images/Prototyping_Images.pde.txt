@@ -1,0 +1,67 @@
+ Aspect Ratio Sun in my hand
+ - introduction set index manually
+ 
+
+
+Display
+size(500, 250); testing smaller DIVs ONLY
+int appWidth = width;
+int appHeight = height;
+println(Display, appWidth, appHeight);
+
+
+Population
+float imageDivX = appWidth  14;
+float imageDivY = appHeight  110;
+float imageDivWidth = appWidth  12;
+float imageDivHeight = appHeight  45;
+
+
+ Image Pathway 
+String folder = ;
+String photoName = Sun in hand; 
+String fileExt = .jpg;         your file extension
+String imagePath = folder + photoName + fileExt;
+println(Image Pathway, imagePath);
+
+
+Image Loading
+PImage image1 = loadImage(imagePath);
+
+ Safety check 
+if (image1 == null) {
+  println(Image failed to load. Check spelling.);
+  exit();
+}
+
+ Image size read from file instead of hardcoding
+int imageWidth1 = image1.width;  
+int imageHeight1 = image1.height;
+
+ Aspect Ratio Calculation
+float image1AspectRatio_GreaterOne = 
+  ( imageWidth1 = imageHeight1 )  float(imageWidth1)  float(imageHeight1)
+                                   float(imageHeight1)  float(imageWidth1);
+
+ Adjusted size
+float imageWidthAdjusted1 = imageDivWidth;
+float imageHeightAdjusted1 = imageWidthAdjusted1  image1AspectRatio_GreaterOne;
+
+ Make sure it fits vertically
+if (imageHeightAdjusted1  imageDivHeight) {
+  while (imageHeightAdjusted1  imageDivHeight) {
+    imageWidthAdjusted1 = 0.98;   slightly slower shrink to look “student-ish”
+    imageHeightAdjusted1 = imageWidthAdjusted1  image1AspectRatio_GreaterOne;
+  }
+}
+
+
+DIV (visual guide)
+rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+
+
+Draw adjusted image
+image(image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1);
+
+
+End Program
