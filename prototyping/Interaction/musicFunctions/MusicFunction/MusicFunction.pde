@@ -35,7 +35,7 @@ void settings() {
  println("Display Questions", displayWidth, displayHeight, shorterSide);
  println("CANVAS Size Key Variables for setup()", width, height);
  } //End settings
- */
+//*/
 void setup() {
   //Display CANVAS
   //size(); //width //height
