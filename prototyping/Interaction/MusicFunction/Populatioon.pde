@@ -33,9 +33,9 @@ void colourPopulation() {
   resetInkNight = int(256*0.75); // 3/4 of origoinal, not 1/4
   //println("Casting answer is:", resetInkNight); //Exactly 192, no rounding invovled, checked on calculator
   //Button Colours: layering local variables leads to preferences controled by Booleans
-  color red = #FF0000;
-  color purple = #9D03FF; //human name for hexidecimal code
-  color yellow = #FFFF00;
+  color Blue = #0D43FF;
+  color Green = #40FF03; //human name for hexidecimal code
+  color Red = #FF0303;
   color darkGray = grayScale;
   color ligthGray = gray;
   //Note: able to use a Ternary Operator but ineffiecient
@@ -47,19 +47,19 @@ void colourPopulation() {
     playColourBackgroundActivated = ligthGray;
     playColourSymbolActivated = darkGray;
     quitBackground = ligthGray;
-    quitBackgroundActivated = red;
+    quitBackgroundActivated = Blue;
     quitButtonInk = darkGray;
   } else
   {
     //Previously the Day Colour Assignments
     resetBackground = resetBackgroundDay;
     resetInk = black;
-    playColourBackground = purple;
-    playColourSymbol = yellow;
-    playColourBackgroundActivated = yellow;
-    playColourSymbolActivated = purple;
+    playColourBackground = Green;
+    playColourSymbol = Blue;
+    playColourBackgroundActivated = Green;
+    playColourSymbolActivated = Green;
     quitBackground = white;
-    quitBackgroundActivated = red;
+    quitBackgroundActivated = Blue;
     quitButtonInk = black;
   } //End Night Mode Colors
 } //End Colour Population
